@@ -22,6 +22,16 @@ execute "hostnamectl set-hostname #{HOST}" do
   not_if "hostnamectl status | grep 'Static hostname: #{HOST}$'"
 end
 
+execute 'timedatectl set-ntp true' do
+  user 'root'
+  not_if 'timedatectl status | grep synchronized | grep yes'
+end
+
+execute 'timedatectl set-timezone Asia/Tokyo' do
+  user 'root'
+  not_if 'timedatectl status | grep Time zone: Asia/Tokyo'
+end
+
 # --- packages
 
 %w[vim].each do |pkg|

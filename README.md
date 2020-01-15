@@ -34,9 +34,11 @@ $ chmod 400 ~/.ssh/authorized_keys
 ```
 
 
+Update `~/.ssh/config` to access the Raspberry Pi.
+
 Finally, apply Itamae to the Raspberry Pi from your local machine.
 
 ```bash
 $ bundle install
-$ bundle exec itamae ssh --host skitty itamae/roles/raspberry-pi-4.rb
+$ UPDATE_ALL=1 bundle exec itamae ssh --node-yaml itamae/nodes/secrets.yml --host skitty itamae/roles/raspberry-pi-4.rb
 ```

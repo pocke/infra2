@@ -40,5 +40,5 @@ Finally, apply Itamae to the Raspberry Pi from your local machine.
 
 ```bash
 $ bundle install
-$ UPDATE_ALL=1 bundle exec itamae ssh --node-yaml itamae/nodes/secrets.yml --host skitty itamae/roles/raspberry-pi-4.rb
+$ UPDATE_ALL=1 bundle exec itamae ssh --node-yaml nodes/secrets.yml --host skitty roles/raspberry-pi-4.rb
 ```

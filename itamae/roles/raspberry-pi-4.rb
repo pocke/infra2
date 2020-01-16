@@ -56,8 +56,8 @@ end
   end
 end
 
-# aur_package 'yay' do
-#   user 'alarm'
-# end
-# aur_package 'ruby-build'
-# aur_package 'rbenv'
+%w[yay ruby-build rbenv].each do |pkg|
+  aur_package pkg do
+    user 'alarm'
+  end
+end

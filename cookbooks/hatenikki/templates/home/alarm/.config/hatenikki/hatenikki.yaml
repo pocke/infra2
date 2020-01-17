@@ -1,0 +1,4 @@
+auth_type: basic
+api_key: <%= node['hatenikki']['api_key']  %>
+user_id: <%= node['hatenikki']['user_id']  %>
+blog_id: <%= node['hatenikki']['blog_id']  %>

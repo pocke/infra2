@@ -75,14 +75,4 @@ node.reverse_merge!(
 )
 include_recipe 'rbenv::user'
 
-rbenv_root = node[:rbenv][:rbenv_root]
-rbenv_init = <<-EOS
-  export RBENV_ROOT=#{rbenv_root}
-  export PATH="#{rbenv_root}/bin:${PATH}"
-  eval "$(rbenv init --no-rehash -)"
-EOS
-
-execute "gem install hatenikki" do
-  command "#{rbenv_init} gem install hatenikki"
-  not_if "#{rbenv_init} gem list hatenikki | grep '^hatenikki'"
-end
+include_recipe '../cookbooks/hatenikki'

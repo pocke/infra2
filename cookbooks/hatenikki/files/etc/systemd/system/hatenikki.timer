@@ -1,0 +1,9 @@
+[Unit]
+Description=Publish diary with Hatenikki gem every morning
+
+[Timer]
+OnCalendar=*-*-* 10:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

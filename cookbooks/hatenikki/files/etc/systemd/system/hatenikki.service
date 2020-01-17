@@ -1,0 +1,8 @@
+[Unit]
+Description=Publish diary with Hatenikki gem
+
+[Service]
+Type=oneshot
+User=alarm
+Group=users
+ExecStart=/home/alarm/.rbenv/bin/rbenv exec hatenikki publish

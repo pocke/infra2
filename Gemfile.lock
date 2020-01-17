@@ -9,6 +9,8 @@ GEM
       schash (~> 0.1.0)
       specinfra (>= 2.64.0, < 3.0.0)
       thor
+    itamae-plugin-recipe-rbenv (0.6.10)
+      itamae (~> 1.2)
     itamae-plugin-resource-aur_package (0.1.0)
       itamae
     net-scp (2.0.0)
@@ -29,6 +31,7 @@ PLATFORMS
 
 DEPENDENCIES
   itamae
+  itamae-plugin-recipe-rbenv
   itamae-plugin-resource-aur_package
 
 BUNDLED WITH

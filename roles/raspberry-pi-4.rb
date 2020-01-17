@@ -50,14 +50,39 @@ end
 
 # --- packages
 
-%w[vim tmux].each do |pkg|
+%w[vim tmux libffi libyaml openssl zlib git].each do |pkg|
   package pkg do
     user 'root'
   end
 end
 
-%w[yay ruby-build rbenv].each do |pkg|
+%w[yay].each do |pkg|
   aur_package pkg do
     user 'alarm'
   end
+end
+
+
+# --- rbenv
+
+node.reverse_merge!(
+  rbenv: {
+    user: 'alarm',
+    global: '2.7.0',
+    versions: ['2.7.0'],
+    install_dependency: false,
+  },
+)
+include_recipe 'rbenv::user'
+
+rbenv_root = node[:rbenv][:rbenv_root]
+rbenv_init = <<-EOS
+  export RBENV_ROOT=#{rbenv_root}
+  export PATH="#{rbenv_root}/bin:${PATH}"
+  eval "$(rbenv init --no-rehash -)"
+EOS
+
+execute "gem install hatenikki" do
+  command "#{rbenv_init} gem install hatenikki"
+  not_if "#{rbenv_init} gem list hatenikki | grep '^hatenikki'"
 end

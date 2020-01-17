@@ -14,6 +14,8 @@ remote_file '/etc/systemd/system/hatenikki.service' do
   user 'root'
   owner 'root'
   group 'root'
+
+  notifies :run, 'execute[systemctl daemon-reload]'
 end
 
 remote_file '/etc/systemd/system/hatenikki.timer' do
@@ -40,4 +42,9 @@ end
 execute 'systemctl start hatenikki.timer' do
   user 'root'
   not_if "systemctl status hatenikki.timer | grep 'Active: active'"
+end
+
+execute 'systemctl daemon-reload' do
+  user 'root'
+  action :nothing
 end

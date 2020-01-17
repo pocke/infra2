@@ -27,7 +27,7 @@ directory '/home/alarm/.config/hatenikki' do
   group 'users'
 end
 
-template '/home/alarm/.config/hatenikki/hatenikki.yaml' do
+template '/home/alarm/.config/hatenikki/hatenablog.yaml' do
   owner 'alarm'
   group 'users'
 end

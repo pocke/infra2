@@ -34,14 +34,9 @@ template '/home/alarm/.config/hatenikki/hatenablog.yaml' do
   group 'users'
 end
 
-execute 'systemctl enable hatenikki.timer' do
+service 'hatenikki.timer' do
   user 'root'
-  not_if "systemctl status hatenikki.timer | grep 'Loaded:' | grep enabled"
-end
-
-execute 'systemctl start hatenikki.timer' do
-  user 'root'
-  not_if "systemctl status hatenikki.timer | grep 'Active: active'"
+  action [:enable, :start]
 end
 
 execute 'systemctl daemon-reload' do

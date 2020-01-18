@@ -6,6 +6,7 @@ if ENV['UPDATE_ALL']
   end
 end
 
+
 # --- system
 
 user 'root' do
@@ -48,6 +49,7 @@ execute 'localectl set-locale LANG=en_US.UTF-8' do
   not_if 'localectl status | grep "System Locale: LANG=en_US.UTF-8"'
 end
 
+
 # --- packages
 
 %w[vim tmux libffi libyaml openssl zlib git].each do |pkg|
@@ -74,5 +76,8 @@ node.reverse_merge!(
   },
 )
 include_recipe 'rbenv::user'
+
+
+# --- Applications
 
 include_recipe '../cookbooks/hatenikki'

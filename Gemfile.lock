@@ -9,7 +9,7 @@ GEM
       schash (~> 0.1.0)
       specinfra (>= 2.64.0, < 3.0.0)
       thor
-    itamae-plugin-recipe-rbenv (0.7.0)
+    itamae-plugin-recipe-rbenv (0.8.0)
       itamae (~> 1.2)
     itamae-plugin-resource-aur_package (0.1.1)
       itamae

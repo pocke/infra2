@@ -9,7 +9,7 @@ GEM
       schash (~> 0.1.0)
       specinfra (>= 2.64.0, < 3.0.0)
       thor
-    itamae-plugin-recipe-rbenv (0.7.0)
+    itamae-plugin-recipe-rbenv (0.8.5)
       itamae (~> 1.2)
     itamae-plugin-resource-aur_package (0.1.1)
       itamae
@@ -19,7 +19,7 @@ GEM
     net-telnet (0.1.1)
     schash (0.1.2)
     sfl (2.3)
-    specinfra (2.82.10)
+    specinfra (2.82.12)
       net-scp
       net-ssh (>= 2.7)
       net-telnet (= 0.1.1)

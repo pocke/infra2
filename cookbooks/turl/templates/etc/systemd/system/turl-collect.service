@@ -1,0 +1,18 @@
+[Unit]
+Description=Collect URL from Twitter with turl
+After=network.target
+
+[Service]
+User=alarm
+Group=users
+
+Environment="RBENV_VERSION=2.7.0"
+Environment="TURL_CONSUMER_KEY=<%= node['turl']['twitter_consumer_key'] %>"
+Environment="TURL_CONSUMER_SECRET=<%= node['turl']['twitter_consumer_secret'] %>"
+Environment="TURL_ACCESS_TOKEN=<%= node['turl']['twitter_access_token'] %>"
+Environment="TURL_ACCESS_TOKEN_SECRET=<%= node['turl']['twitter_access_token_secret'] %>"
+
+ExecStart=/home/alarm/.rbenv/bin/rbenv exec turl-collect
+
+RestartSec=15
+Restart=always

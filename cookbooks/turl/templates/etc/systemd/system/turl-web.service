@@ -1,0 +1,14 @@
+[Unit]
+Description=Web App for Turl
+
+[Service]
+User=alarm
+Group=users
+
+Environment="RBENV_VERSION=2.7.0"
+Environment="APP_ENV=production"
+
+ExecStart=/home/alarm/.rbenv/bin/rbenv exec turl-web
+
+RestartSec=1
+Restart=always

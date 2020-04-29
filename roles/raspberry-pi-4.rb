@@ -81,3 +81,4 @@ include_recipe 'rbenv::user'
 # --- Applications
 
 include_recipe '../cookbooks/hatenikki'
+include_recipe '../cookbooks/turl'

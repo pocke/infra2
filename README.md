@@ -40,5 +40,6 @@ Finally, apply Itamae to the Raspberry Pi from your local machine.
 
 ```bash
 $ bundle install
+$ vim nodes/secrets.yml # Copy the secret values from the password manager
 $ UPDATE_ALL=1 bundle exec itamae ssh --node-yaml nodes/secrets.yml --host skitty roles/raspberry-pi-4.rb
 ```

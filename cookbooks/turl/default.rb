@@ -6,8 +6,12 @@ rbenv_init = <<-EOS
 EOS
 
 execute "gem install turl" do
-  command "#{rbenv_init} gem install turl"
-  not_if "#{rbenv_init} gem list turl | grep '^turl'"
+  version = '0.2.0'
+  command "#{rbenv_init} gem install turl -v #{version}"
+  not_if "#{rbenv_init} gem list --installed turl -v #{version}"
+
+  notifies :restart, 'service[turl-web.service]'
+  notifies :restart, 'service[turl-collect.service]'
 end
 
 template '/etc/systemd/system/turl-collect.service' do

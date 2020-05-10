@@ -6,7 +6,7 @@ rbenv_init = <<-EOS
 EOS
 
 execute "gem install turl" do
-  version = '0.2.0'
+  version = '0.2.1'
   command "#{rbenv_init} gem install turl -v #{version}"
   not_if "#{rbenv_init} gem list --installed turl -v #{version}"
 

@@ -82,3 +82,4 @@ include_recipe 'rbenv::user'
 
 include_recipe '../cookbooks/hatenikki'
 include_recipe '../cookbooks/turl'
+include_recipe '../cookbooks/yudachi'

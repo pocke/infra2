@@ -1,0 +1,9 @@
+[Unit]
+Description=timer to notify rainfall to slack
+
+[Timer]
+OnUnitActiveSec=10m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

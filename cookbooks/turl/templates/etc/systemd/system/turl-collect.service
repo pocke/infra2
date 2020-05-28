@@ -16,3 +16,6 @@ ExecStart=/home/alarm/.rbenv/bin/rbenv exec turl-collect
 
 RestartSec=15
 Restart=always
+
+[Install]
+WantedBy=multi-user.target

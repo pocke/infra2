@@ -2,6 +2,7 @@
 Description=timer to notify rainfall to slack
 
 [Timer]
+OnBootSec=10m
 OnUnitActiveSec=10m
 Persistent=true
 

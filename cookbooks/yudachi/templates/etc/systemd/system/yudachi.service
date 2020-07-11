@@ -7,7 +7,7 @@ User=alarm
 Group=users
 ExecStart=/home/alarm/.rbenv/bin/rbenv exec notify-yudachi
 
-Environment="RBENV_VERSION=2.7.0"
+Environment="RBENV_VERSION=2.7.1"
 Environment="YUDACHI_LOCATION=<%= node['yudachi']['location'] %>"
 Environment="YUDACHI_SLACK_URL=<%= node['yudachi']['slack_url'] %>"
 Environment="YUDACHI_YAHOO_JAPAN_APP_ID=<%= node['yudachi']['yahoo_japan_app_id'] %>"

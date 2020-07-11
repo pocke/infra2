@@ -5,7 +5,7 @@ Description=Web App for Turl
 User=alarm
 Group=users
 
-Environment="RBENV_VERSION=2.7.0"
+Environment="RBENV_VERSION=2.7.1"
 Environment="APP_ENV=production"
 
 ExecStart=/home/alarm/.rbenv/bin/rbenv exec turl-web

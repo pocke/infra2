@@ -70,8 +70,8 @@ end
 node.reverse_merge!(
   rbenv: {
     user: 'alarm',
-    global: '2.7.0',
-    versions: ['2.7.0'],
+    global: '2.7.1',
+    versions: ['2.7.1'],
     install_dependency: false,
   },
 )

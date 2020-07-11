@@ -6,7 +6,7 @@ After=network.target
 User=alarm
 Group=users
 
-Environment="RBENV_VERSION=2.7.0"
+Environment="RBENV_VERSION=2.7.1"
 Environment="TURL_CONSUMER_KEY=<%= node['turl']['twitter_consumer_key'] %>"
 Environment="TURL_CONSUMER_SECRET=<%= node['turl']['twitter_consumer_secret'] %>"
 Environment="TURL_ACCESS_TOKEN=<%= node['turl']['twitter_access_token'] %>"

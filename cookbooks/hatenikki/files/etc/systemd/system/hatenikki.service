@@ -5,5 +5,5 @@ Description=Publish diary with Hatenikki gem
 Type=oneshot
 User=alarm
 Group=users
-Environment="RBENV_VERSION=2.7.0"
+Environment="RBENV_VERSION=2.7.1"
 ExecStart=/home/alarm/.rbenv/bin/rbenv exec hatenikki publish

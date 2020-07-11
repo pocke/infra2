@@ -6,8 +6,8 @@ rbenv_init = <<-EOS
 EOS
 
 execute "gem install hatenikki" do
-  command "#{rbenv_init} gem install hatenikki"
-  not_if "#{rbenv_init} gem list hatenikki | grep '^hatenikki'"
+  command "#{rbenv_init} gem install hatenikki:0.2.0"
+  not_if "#{rbenv_init} gem list --installed hatenikki -v 0.2.0"
 end
 
 remote_file '/etc/systemd/system/hatenikki.service' do

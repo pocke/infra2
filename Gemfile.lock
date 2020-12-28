@@ -3,7 +3,7 @@ GEM
   specs:
     ansi (1.5.0)
     hashie (4.1.0)
-    itamae (1.10.10)
+    itamae (1.11.0)
       ansi
       hashie
       schash (~> 0.1.0)
@@ -20,7 +20,7 @@ GEM
     rake (13.0.3)
     schash (0.1.2)
     sfl (2.3)
-    specinfra (2.82.18)
+    specinfra (2.82.22)
       net-scp
       net-ssh (>= 2.7)
       net-telnet (= 0.1.1)

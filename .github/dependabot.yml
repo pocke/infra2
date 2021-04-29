@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  assignees:
+  - pocke
+  ignore:
+  - dependency-name: itamae
+    versions:
+    - 1.11.1
+    - 1.12.0
